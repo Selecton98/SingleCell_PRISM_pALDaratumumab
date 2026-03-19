@@ -1,0 +1,31 @@
+﻿Sample ID,Sex,Age at diagnosis (y.o.),Heart involvement,Kidney involvement ,Cytogenetics abnormalities,Light chain isotype,Mayo 04 staging at diagnosis,dFLC at baseline (mg/L),BMPC%,Hematologic response,Response cycle
+ALk4,male,59,Yes,Yes,IgH/CCND1(t(11;14)),Kappa,3a,984.4,29,CR,C2
+ALk6,male,50,Yes,Yes,IgH/CCND1(t(11;14)),Kappa,2,832.4,2,NR/SD,C1
+ALl1,male,51,Yes,No,1q21 (gain),Lambda,2,1251.4,10.5,CR,C3
+ALl14,male,51,Yes,No,IgH/CCND1(t(11;14)),Lambda,3a,714.4,5,CR,C2
+ALl16,female,52,Yes,No,17p13.1del,Lambda,2,824.1,9,PR,C5
+ALl18,female,71,No,Yes,None,Lambda,1,994.9,7,CR,C1
+ALl19,male,69,Yes,No,1q21 (gain),Lambda,3b,1093.8,12,CR,C1
+ALl20,male,76,Yes,No,None,Lambda,3a,152.2,1,CR,C1
+ALl4,male,59,Yes,No,None,Lambda,2,339.3,2,PR,C3
+ALl5,male,46,Yes,No,IgH/CCND1(t(11;14)),Lambda,2,1086.5,8,PR,C1
+ALl7,female,67,Yes,No,IgH/CCND1(t(11;14)),Lambda,3a,158.9,1,NR/SD,C2
+ALl9,male,63,Yes,No,None,Lambda,2,124.7,1,CR,C1
+ALl17,male,49,Yes,No,IgH/CCND1(t(11;14)),Lambda,3a,6733.8,30.5,NR/SD,C1
+ALl21,male,65,Yes,Yes,1q21 (gain),Lambda,2,4679.7,16,NA,NA
+ALk1,male,60,Yes,No,IgH/CCND1(t(11;14)),Kappa,2,981.7,20,CR,C4
+ALl10,male,59,Yes,Yes,IgH/CCND1(t(11;14)),Lambda,3a,1317.4,3,PR,C4
+ALl13,female,41,Yes,No,1q21 (gain),Lambda,2,354.5,27.5,CR,C2
+ALl22,male,59,Yes,No,None,Lambda,3a,305,5.5,VGPR,C2
+ALl30,female,59,Yes,Yes,IgH/CCND1(t(11;14)),Lambda,3a,1813.4,2.5,CR,C2
+ALk2,male,63,Yes,No,None,Kappa,2,1870.7,5.5,VGPR,C1
+ALk3,male,60,Yes,No,IgH/CCND1(t(11;14)),Kappa,2,725.7,8.5,VGPR,C1
+ALk5,male,69,Yes,No,IgH/CCND1(t(11;14)),Kappa,2,1014,6.5,NA,NA
+ALl11,female,58,Yes,No,None,Lambda,3a,1649.7,23.5,PR,C6
+ALl12,male,59,Yes,No,"IgH/FGFR3(t(4;14)),1q21 (gain)",Lambda,2,405.1,15,NR/SD,C1
+ALl15,male,64,Yes,Yes,None,Lambda,3b,327,7,NA,NA
+ALl2,male,34,Yes,No,IgH/CCND1(t(11;14)),Lambda,2,1320.4,2,PR,C2
+ALl3,male,62,Yes,No,IgH/CCND1(t(11;14)),Lambda,2,126.2,1,VGPR,C1
+ALl6,male,54,Yes,No,IgH/CCND1(t(11;14)),Lambda,2,405,5.5,CR,C2
+ALl8,male,60,Yes,No,None,Lambda,2,1345,15.5,CR,C3
+ALk7,male,67,Yes,No,1q21 (gain),Kappa,2,726.1,27,VGPR,C2
