@@ -1,6 +1,4 @@
-# SingleCell_PRISM_Daratumumab
-
-# SingleCell-PRISM: Primary AL Amyloidosis and Daratumumab Response
+## SingleCell-PRISM: Primary AL Amyloidosis and Daratumumab Response
 
 ## ⚠️ Disclaimer
 
