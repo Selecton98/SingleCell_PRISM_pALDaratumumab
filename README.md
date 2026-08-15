@@ -61,14 +61,28 @@ The analyses identify plasma-cell-intrinsic programs and inflammatory–immunosu
 | `7.3_starCAT_plasmacells-Gort.ipynb` | Projection of reference plasma-cell states in the GSE292189 cohort. |
 | `8.1_BM-TME-azimuth-myeloid_Safina.ipynb` | Validation of myeloid-cell states in an additional external cohort. |
 
-## 🧩 Utility Scripts
+## 🧰 Major Software Dependencies
 
-The following R scripts provide gene-set enrichment utilities used by the myeloid-, T-cell-, and NK-cell-focused workflows:
+The repository contains both R- and Python-based analyses. Package requirements vary by notebook, but the major dependencies are summarized below.
 
-- `enrichment_utils_C5.R`
-- `enrichment_utils_C5_custom_IFN.R`
-- `enrichment_utils_C5_custom_IFNGR.R`
-- `enrichment_utils_C5_custom_PGE.R`
+### R workflows
+
+- **Single-cell analysis:** Seurat, SingleCellExperiment, DropletUtils, SoupX, DoubletFinder/scDblFinder, celda, harmony, and scCustomize
+- **Reference-based cell annotation:** SingleR, celldex, Azimuth, and sceasy
+- **Cell–cell communication and networks:** CellChat and igraph
+- **Gene-set and differential-expression analysis:** GSVA, clusterProfiler, msigdbr, limma, edgeR, speckle, org.Hs.eg.db, and AnnotationDbi
+- **Data manipulation and visualization:** dplyr, tidyr, readr, data.table, stringr, purrr, ggplot2, patchwork, pheatmap, ComplexHeatmap, ggpubr, and ComplexUpset
+
+### Python workflows
+
+- **Single-cell data structures and analysis:** Scanpy and AnnData
+- **Plasma-cell programs and state projection:** cNMF and starCAT
+- **Clonotype and repertoire analysis:** Dandelion and clone2vec
+- **Developmental-potential and trajectory analysis:** CytoTRACE/CellRank and scVelo
+- **Copy-number analysis:** infercnvpy
+- **Scientific computing and visualization:** pandas, NumPy, SciPy, statsmodels, Matplotlib, and seaborn
+
+Several specialized packages may require installation from Bioconductor, Bioconda, GitHub, or the package authors’ documented distribution channels rather than from CRAN or PyPI. Exact package versions are not pinned in this repository; users seeking strict reproduction should match the software versions recorded in the relevant notebook metadata or original analysis environment.
 
 ## 📊 Reproducibility
 
