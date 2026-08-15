@@ -8,7 +8,7 @@ The accompanying manuscript is a preprint and has not yet finished peer review. 
 
 Systemic light-chain amyloidosis (AL) is driven by clonal plasma cells that produce misfolded immunoglobulin light chains. Although daratumumab-based therapy has improved treatment outcomes, a subset of patients does not achieve an optimal hematologic response.
 
-The analyses identify plasma-cell-intrinsic programs and inflammatory–immunosuppressive interactions associated with suboptimal response to daratumumab-based therapy.The analytical workflow examines:
+The analyses identify plasma-cell-intrinsic programs and inflammatory–immunosuppressive interactions associated with suboptimal response to daratumumab-based therapy. The analytical workflow examines:
 
 1. **Single-cell cohort assembly, preprocessing, and quality control**
 2. **Amyloidogenic plasma-cell identification**
@@ -81,8 +81,6 @@ The repository contains both R- and Python-based analyses. Package requirements 
 - **Developmental-potential and trajectory analysis:** CytoTRACE/CellRank and scVelo
 - **Copy-number analysis:** infercnvpy
 - **Scientific computing and visualization:** pandas, NumPy, SciPy, statsmodels, Matplotlib, and seaborn
-
-Several specialized packages may require installation from Bioconductor, Bioconda, GitHub, or the package authors’ documented distribution channels rather than from CRAN or PyPI. Exact package versions are not pinned in this repository; users seeking strict reproduction should match the software versions recorded in the relevant notebook metadata or original analysis environment.
 
 ## 📊 Reproducibility
 
