@@ -4,6 +4,8 @@
 
 The accompanying manuscript is a preprint and has not yet finished peer review. This repository is provided for research and reproducibility purposes only. The code and results should not be used independently to guide clinical diagnosis, prognosis, or treatment decisions.
 
+<img width="191" height="191" alt="image" src="https://github.com/user-attachments/assets/8fef46f0-c1e6-433a-bf15-4e7a50ae077f" />
+
 ## ✨ Overview
 
 Systemic light-chain amyloidosis (AL) is driven by clonal plasma cells that produce misfolded immunoglobulin light chains. Although daratumumab-based therapy has improved treatment outcomes, a subset of patients does not achieve an optimal hematologic response.
