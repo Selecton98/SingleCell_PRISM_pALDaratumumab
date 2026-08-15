@@ -1,0 +1,26 @@
+GEP naming:
+GEP11: GEP5
+
+Sample naming:
+Original	Revised
+refrac: post
+HPCAL1: ALl17
+HPCAL2: ALk7
+HPCAL3: ALl21
+
+Monocyte naming
+Original	Revised
+CD14Mono_set1High_set2High: CD14Mono_neutrophil-like1
+CD14Mono_set1Low_set2High: CD14Mono_neutrophil-like2
+CD14Mono_set1Low_set2Low: CD14Mono_dendritic-like1
+CD14Mono_set1High_set2Low: CD14Mono_dendritic-like2
+
+
+NK cell naming:
+Original	Revised
+NK cells_CD56+_CD16-_cytotoxic:	NK cells_CD56+_CD16+_cytokine_responsive
+NK cells_CD56-_CD16+_cytotoxic:	NK cells_CD56low_CD16+_cytotoxic
+NK cells_CD56-_CD16+_cytotoxic_terminal:	NK cells_CD56low_CD16+_terminal_cytotoxic
+NK cells_CD56+_CD16-_transitional:	NK cells_ CD56+_CD16-_transitional
+NK cells_CD56+_CD16-_immature:	NK cells_ CD56+_CD16-_immature
+NK cells_CD56-_CD16+_cytokine:	NK cells_CD56-_CD16+_TNF+
