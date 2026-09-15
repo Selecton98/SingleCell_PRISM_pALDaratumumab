@@ -19,16 +19,12 @@ The analyses identify plasma-cell-intrinsic programs and inflammatory–immunosu
 
 ## 📁 Notebook Descriptions
 
-# Assembly of sample-level 10x matrices into was skipped due to PHI concerns.
+Assembly of sample-level 10x matrices into was skipped due to PHI concerns.
 
 | Notebook | Description |
 |---|---|
 | `1.1_doubletsambientRNA.ipynb` | Quality control and preprocessing by doublets and ambient RNA removal. |
 | `1.2_standardpipelines.ipynb` | Adjusted embedding, clustering, and initial annotation with marker genes. |
-| `1.1_plasmacellcloneVDJ-IgH.ipynb` | Integration of immunoglobulin heavy-chain clonotypes with plasma-cell states and clinical groups. |
-| `1.2_dandelion-isotype.ipynb` | Dandelion analysis of immunoglobulin isotypes and clonotype structure. |
-| `1.3_cytotrace_IgHIgKIgL.ipynb` | Integration of IgH, IgK, and IgL status with CytoTRACE-derived plasma-cell states. |
-| `1.4_IgHsaturationcurve.ipynb` | Assessment of immunoglobulin heavy-chain repertoire saturation. |
 | `2.1_plasmacellcloneVDJ.ipynb` | Identification of amyloidogenic and polyclonal plasma-cell clones using transcriptomic and V(D)J information. |
 | `2.2_cNMF_plasmacellsGEP.ipynb` | Inference of plasma-cell gene-expression programs using cNMF. |
 | `2.3_starCAT_plasmacellsGEP.ipynb` | Projection of discrete and continuous plasma-cell programs with starCAT. |
@@ -36,8 +32,8 @@ The analyses identify plasma-cell-intrinsic programs and inflammatory–immunosu
 | `2.5_Functional-string.ipynb` | Recurrent differential-expression analysis and functional interpretation of amyloidogenic plasma-cell genes. |
 | `2.6_Functional-cNMF.ipynb` | Functional enrichment and interpretation of cNMF programs. |
 | `2.7_bulk_signature_GSVA.ipynb` | Evaluation of single-cell-derived signatures in an external bulk RNA-seq cohort using GSVA. |
-| `3.2_ALl9_ALk3_ALl5-clonetrack.ipynb` | Clone2vec-based analysis of pre/post-treatment plasma-cell clonal states. |
 | `3.1_cytotrace_cloneGEP5.ipynb` | CytoTRACE analysis of plasma-cell developmental potential and gene-expression programs. |
+| `3.2_ALl9_ALk3_ALl5-clonetrack.ipynb` | Clone2vec-based analysis of pre/post-treatment plasma-cell clonal states. |
 | `3.3_dandelion-LCMS.ipynb` | Dandelion repertoire analysis and light-chain mass-spectrometry validation of clonotypes. |
 | `3.4_dandelion-allclones.ipynb` | Cohort-wide B-cell receptor clonotype and repertoire analysis. |
 | `3.5_infercnvpy_plasma.ipynb` | Inference and visualization of plasma-cell copy-number alterations. |
