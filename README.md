@@ -19,10 +19,12 @@ The analyses identify plasma-cell-intrinsic programs and inflammatory–immunosu
 
 ## 📁 Notebook Descriptions
 
+# Assembly of sample-level 10x matrices into was skipped due to PHI concerns.
+
 | Notebook | Description |
 |---|---|
-| `1.1_mergesample.ipynb` | Assembly of sample-level 10x matrices into the 78-sample AL cohort. |
-| `1.2_standardpipelines.ipynb` | Quality control, preprocessing, integration, clustering, and initial annotation. |
+| `1.1_doubletsambientRNA.ipynb` | Quality control and preprocessing by doublets and ambient RNA removal. |
+| `1.2_standardpipelines.ipynb` | Adjusted embedding, clustering, and initial annotation with marker genes. |
 | `1.1_plasmacellcloneVDJ-IgH.ipynb` | Integration of immunoglobulin heavy-chain clonotypes with plasma-cell states and clinical groups. |
 | `1.2_dandelion-isotype.ipynb` | Dandelion analysis of immunoglobulin isotypes and clonotype structure. |
 | `1.3_cytotrace_IgHIgKIgL.ipynb` | Integration of IgH, IgK, and IgL status with CytoTRACE-derived plasma-cell states. |
