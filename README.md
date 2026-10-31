@@ -19,7 +19,7 @@ The analyses identify plasma-cell-intrinsic programs and inflammatory–immunosu
 
 ## 📁 Notebook Descriptions
 
-Assembly of sample-level 10x matrices into was skipped due to PHI concerns.
+Assembly of sample-level 10x matrices into cohort objects is omitted because the source data include protected health information.
 
 | Notebook | Description |
 |---|---|
@@ -28,10 +28,11 @@ Assembly of sample-level 10x matrices into was skipped due to PHI concerns.
 | `2.1_plasmacellcloneVDJ.ipynb` | Identification of amyloidogenic and polyclonal plasma-cell clones using transcriptomic and V(D)J information. |
 | `2.2_cNMF_plasmacellsGEP.ipynb` | Inference of plasma-cell gene-expression programs using cNMF. |
 | `2.3_starCAT_plasmacellsGEP.ipynb` | Projection of discrete and continuous plasma-cell programs with starCAT. |
-| `2.4_plasmacellclone-NNLS.ipynb` | Projection of reference plasma-cell programs using non-negative least squares. |
+| `2.4_plasmacellclone-starCAT-part1.ipynb` | Sample-level analysis of starCAT-projected plasma-cell programs: post/pre-treatment distributions and pretreatment Good/Poor response comparisons across all patients and t(11;14) strata. |
+| `2.4_plasmacellclone-starCAT-part2.ipynb` | Clinical annotation of sample-level starCAT usages, cytogenetic-subgroup response comparisons, and export of subgroup figures. |
 | `2.5_Functional-string.ipynb` | Recurrent differential-expression analysis and functional interpretation of amyloidogenic plasma-cell genes. |
 | `2.6_Functional-cNMF.ipynb` | Functional enrichment and interpretation of cNMF programs. |
-| `2.7_bulk_signature_GSVA.ipynb` | Evaluation of single-cell-derived signatures in an external bulk RNA-seq cohort using GSVA. |
+| `2.7_bulk_signature_GSVA_updated.ipynb` | Evaluation of single-cell-derived signatures in an external bulk RNA-seq cohort using GSVA. |
 | `3.1_cytotrace_cloneGEP5.ipynb` | CytoTRACE analysis of plasma-cell developmental potential and gene-expression programs. |
 | `3.2_ALl9_ALk3_ALl5-clonetrack.ipynb` | Clone2vec-based analysis of pre/post-treatment plasma-cell clonal states. |
 | `3.3_dandelion-LCMS.ipynb` | Dandelion repertoire analysis and light-chain mass-spectrometry validation of clonotypes. |
@@ -45,7 +46,7 @@ Assembly of sample-level 10x matrices into was skipped due to PHI concerns.
 | `4.5_BM-TME-NK cells.ipynb` | Identification and characterization of NK-cell subpopulations. |
 | `4.6_BM-TME-B cells.ipynb` | Identification and characterization of non-plasma B-cell populations. |
 | `4.7_upsetplot_interferon.ipynb` | Comparison of interferon-response gene sets across immune-cell populations. |
-| `5.1_cellchat-trial3.ipynb` | Customized, sample-aware cell–cell communication analysis using CellChat. |
+| `5.1_cellchat-78samples-trial3_annotations.ipynb` | Customized, sample-aware cell–cell communication analysis using CellChat. |
 | `5.2_cellchat-ALNicheGraph.ipynb` | Construction and querying of a signaling-to-phenotype AL niche graph from saved CellChat and enrichment results. |
 | `5.3_CD38_publication_figures.ipynb` | Generation of CD38-centered publication figures and cell-type comparisons. |
 | `6.0_GSE175385_Alameda_preprocess.ipynb` | Preparation of the GSE175385 Alameda validation dataset. |
@@ -57,6 +58,19 @@ Assembly of sample-level 10x matrices into was skipped due to PHI concerns.
 | `7.3_starCAT_plasmacells-Gort.ipynb` | Projection of reference plasma-cell states in the GSE292189 cohort. |
 | `8.1_BM-TME-azimuth-myeloid_Safina.ipynb` | Validation of myeloid-cell states in an additional external cohort. |
 
+### Plasma-cell program workflow (2.2–2.4)
+
+1. Run `2.2_cNMF_plasmacellsGEP.ipynb` to infer the reference programs.
+2. Run `2.3_starCAT_plasmacellsGEP.ipynb` to project those reference programs onto query cells with starCAT and export `plasma_cnmf_3_usage_norm_withoutIG_k=13_allplasmacell.csv`.
+3. Run either or both `2.4_plasmacellclone-starCAT-part1.ipynb` and `2.4_plasmacellclone-starCAT-part2.ipynb` for downstream R analyses. Each notebook prepares its own sample summaries and clinical response table; neither requires objects left in memory by the other notebook.
+
+The `cnmf` substring in the usage CSV is the historical reference-program filename. The usages consumed by both Part 1 and Part 2 come from starCAT in notebook 2.3.
+
+Both Part 1 and Part 2 require the cohort Seurat object `250817-AL-all78umap-singletonly-umap.rds`, the additional plasma-cell barcode list `sce1_ALl19clustermeta.data.csv`, the starCAT usage CSV above, and `sampleannotation-all.csv` with at least `samplename`, `bestorlast.response`, and `mut`. Supply these files in the working directory and configure the reticulate Python/Conda paths for the local environment. These cohort and clinical input files are not included in this repository.
+
+- **Part 1 outputs:** statistical CSVs and summary PDFs in `GEP_prepost_simplified/` and `GEP_pretreatment_GoodPoor/`. Tests compare sample-level distributions with unpaired Wilcoxon tests and Benjamini–Hochberg FDR within each analysis stratum.
+- **Part 2 outputs:** annotated heatmaps and nine-program subgroup comparison plots inline, plus `PlotB_*`, `PlotC_*`, and `PlotD_*` PDFs for the seven-program subset (excluding GEP3 and GEP7) in `usage_plots_by_mut/`. The exploratory subgroup figures display nominal Wilcoxon p-values with at least three samples per comparison arm and Cliff's delta for pre/post comparisons when estimable.
+
 ## 🧰 Major Software Dependencies
 
 The repository contains both R- and Python-based analyses. Package requirements vary by notebook, but the major dependencies are summarized below.
@@ -64,10 +78,11 @@ The repository contains both R- and Python-based analyses. Package requirements 
 ### R workflows
 
 - **Single-cell analysis:** Seurat, SingleCellExperiment, DropletUtils, SoupX, DoubletFinder/scDblFinder, celda, harmony, and scCustomize
+- **R/Python interoperability:** reticulate
 - **Reference-based cell annotation:** SingleR, celldex, Azimuth, and sceasy
 - **Cell–cell communication and networks:** CellChat and igraph
 - **Gene-set and differential-expression analysis:** GSVA, clusterProfiler, msigdbr, limma, edgeR, speckle, org.Hs.eg.db, and AnnotationDbi
-- **Data manipulation and visualization:** dplyr, tidyr, readr, data.table, stringr, purrr, ggplot2, patchwork, pheatmap, ComplexHeatmap, ggpubr, and ComplexUpset
+- **Data manipulation and visualization:** dplyr, tidyr, readr, data.table, stringr, purrr, ggplot2, patchwork, pheatmap, ComplexHeatmap, ggpubr, scales, broom, effsize, and ComplexUpset
 
 ### Python workflows
 
