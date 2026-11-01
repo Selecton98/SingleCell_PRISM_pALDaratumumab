@@ -60,6 +60,8 @@ Assembly of sample-level 10x matrices into cohort objects is omitted because the
 
 ## 🧰 Major Software Dependencies
 
+See [Dependencies.md](Dependencies.md) for the file-by-file audit of recorded software versions and unversioned dependencies.
+
 The repository contains both R- and Python-based analyses. Package requirements vary by notebook, but the major dependencies are summarized below.
 
 ### R workflows
